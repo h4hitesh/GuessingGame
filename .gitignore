@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GuessNumberGame/bin/Debug/net6.0/GuessNumberGame.dll
+/GuessNumberGame/bin/Debug/net6.0
+/GuessNumberGame/obj
+/GuessNumberGame.Test/bin/Debug/net6.0
+/GuessNumberGame.Test/obj
