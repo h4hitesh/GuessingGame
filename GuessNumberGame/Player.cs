@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace GuessNumberGame
 {
     public class Player
@@ -30,14 +25,21 @@ namespace GuessNumberGame
             bool IsValidNumber = false;
             do
             {
-                int.TryParse(Console.ReadLine(), out playerResponse);
+                string playerInput = Console.ReadLine();
+
+                if(string.Equals(playerInput, "exit", StringComparison.OrdinalIgnoreCase))
+                {
+                    Environment.Exit(0);
+                }
+
+                int.TryParse(playerInput, out playerResponse);
 
                 IsValidNumber = IsNumberInRange(min, max, playerResponse);
                 if (!IsValidNumber)
                 {
                     Console.WriteLine("Invalid input.");
                 }
-
+                
             } while (!IsValidNumber);
 
 

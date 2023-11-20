@@ -21,36 +21,12 @@
                 playerGuess = player.GetValidResponseFromPlayer(minNumber, maxNumber);
 
                 string result = player.CheckPlayerGuess(secretNumber, playerGuess);
-               
+
                 Console.WriteLine(result);
 
             } while (playerGuess != secretNumber);
 
             Console.WriteLine("Welldone , You guessed my number.");
-
-        }
-                
-
-        private int GetValidNumberFromPlayer(int minNumber, int maxNumber)
-        {
-            int playerResponse;
-            bool IsValidNumber = false;
-            do
-            {
-                int.TryParse(Console.ReadLine(), out playerResponse);
-
-                if (playerResponse < 1 || playerResponse > 3)
-                {
-                    IsValidNumber = false;
-                }
-                else
-                {
-                    IsValidNumber = true;
-                }
-            } while (IsValidNumber);
-
-                       
-            return playerResponse;
         }
 
         public int GenerateRandomNumber()

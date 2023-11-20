@@ -8,7 +8,7 @@ namespace GuessNumberGame.Test
         }
 
         [Test]
-        public void PlayGame_CorrectGuess_ReturnsCongratulations()
+        public void PlayerGuessNumber_test()
         {
             // Arrange
             string playerGuessNumber = "80";
@@ -43,18 +43,5 @@ namespace GuessNumberGame.Test
             }
         }
 
-        //[Test]
-        //public void CheckGuess_CorrectGuess_ReturnsCorrect()
-        //{
-        //    // Arrange
-        //    GuessGame game = new GuessGame(1, 100);
-        //    int playerGuessNumber = 42;
-
-        //    // Act
-        //    string result = game.PlayerGuessGame(playerGuessNumber, 42);
-
-        //    // Assert
-        //    Assert.AreEqual("Correct", result);
-        //}
     }
 }
