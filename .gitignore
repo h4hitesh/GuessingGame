@@ -8,3 +8,5 @@
 /GuessNumberGame/obj
 /GuessNumberGame.Test/bin/Debug/net6.0
 /GuessNumberGame.Test/obj
+/GuessNumberGame/bin/Release/net6.0
+/GuessNumberGame.Test/bin/Release/net6.0
