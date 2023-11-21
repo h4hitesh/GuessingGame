@@ -4,8 +4,6 @@ using Microsoft.Extensions.Configuration;
 
 class Program
 {
-
-
     static void Main()
     {
 
@@ -15,7 +13,7 @@ class Program
 
         IConfiguration config = builder.Build();
         int minNumber, maxNumber;
-        GetUpperBoundAndLLowerBoundNumber(config, out minNumber, out maxNumber);
+        GetUpperBoundAndLowerBoundForGame(config, out minNumber, out maxNumber);
 
         Console.WriteLine("Select a mode: [1] Guess a number, [2] Computer guess a number (type 'exit' to quit the game at any point)");
 
@@ -38,7 +36,7 @@ class Program
         }
     }
 
-    private static void GetUpperBoundAndLLowerBoundNumber(IConfiguration config, out int minNumber, out int maxNumber)
+    private static void GetUpperBoundAndLowerBoundForGame(IConfiguration config, out int minNumber, out int maxNumber)
     {
         minNumber = 1;
         maxNumber = 100000;
