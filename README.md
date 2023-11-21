@@ -46,11 +46,13 @@ Click on "Run all Tests in view" button menu
 ```
 ├── ./
 ├── GuessNumberGame [1]
+	|─ appsettings.json [1.1]
 ├── GuessNumberGame.Test [2]
 
 ``` 
 
 * [1] GuessNumberGame -  is a console application designed to play a game.
+* [1.1] Set the lower bound and upper bound , default range is 1-10,000
 * [2] GuessNumberGame.Test - TDD application logic using NUnit.
 
 ### Code Structure
