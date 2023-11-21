@@ -6,7 +6,7 @@ class Program
     {
 
         int minNumber = 1;
-        int maxNumber = 10000;
+        int maxNumber = 100;
 
         Console.WriteLine("Select a mode: [1] Guess a number, [2] Computer guess a number (type 'exit' to quit the game at any point)");
 

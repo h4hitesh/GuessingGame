@@ -23,5 +23,39 @@ namespace GuessNumberGame.Test
             Assert.GreaterOrEqual(randomNumber, minNumber, "Generated number should be greater than or equal to minNumber");
             Assert.LessOrEqual(randomNumber, maxNumber, "Generated number should be less than or equal to maxNumber");
         }
+
+
+        [Test]
+        public void ComputerGuess_Test()
+        {
+            // Arrange
+            int computerSecret = 37;
+          
+            using (var consoleOutput = new StringWriter())
+            {
+               
+                Console.SetOut(consoleOutput);
+                var playerInput = String.Join(Environment.NewLine, new[]
+                {
+                    "50",
+                    "25",
+                    "37"
+                });
+
+                Console.SetIn(new System.IO.StringReader(playerInput));
+
+
+                // usage:
+
+                // Act
+                IComputerGuessNumberGame game = new ComputerGuessNumberGame(1, 100);
+                bool isFound = game.GuessComputerSecretNumber(computerSecret);
+               
+                // Assert
+                
+                Assert.IsTrue(isFound); 
+            }
+        }
+
     }
 }
